@@ -1,0 +1,22 @@
+{
+  "name": "dopm",
+  "repo": "dopm/dopm",
+  "description": "dopm assets",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "component/query": "*",
+    "dopm/google-analytics": "*",
+    "dopm/fastlink": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ],
+  "styles": [
+    "ui.css",
+    "site.css"
+  ]
+}
