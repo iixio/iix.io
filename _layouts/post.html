@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<main role="main">
+<header>
+   {% include breadcrumbs.html %}
+  <h1>{{ page.title | widont }}</h1>
+  <p class="subtitle">{{ page.excerpt }}</p>
+</header>
+  {% if page.image.feature %}
+    <div class="page-image">
+      <img src="{{ site.url }}/images/{{ page.image.feature }}" class="page-feature-image" alt="{{ page.title }}" itemprop="image">
+      {% if page.image.credit %}{% include image-credit.html %}{% endif %}
+    </div><!-- /.page-image -->
+  {% endif %}
+<article>
+  <div class="content">
+    {{ content }}
+  </div>
+</article>
+<footer>
+<time class="meta small" datetime='{{ page.date | date: "%A %-d %B %Y" }}' itemprop="dateCreated">{{ page.date | date: "%A %-d %B %Y" }}</time>
+<p>{{ page.title | widont }}</p>
+<cite>Iwan Suryadmo</cite>
+</footer>
+</main>

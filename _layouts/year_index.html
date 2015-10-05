@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<main id="main" role="main">
+<header>
+  <h1>Archive for {{ page.date | date: "%Y" }}</h1>
+  <p class="subtitle">Posts from the year {{ page.date | date: "%Y" }}.</p>
+</header>
+<article itemscope itemtype="http://schema.org/Article">
+  <div class="content">
+    <div class="list">
+        {% for post in page.posts %}
+          {% include archive__item.html %}
+        {% endfor %}
+     </div>
+  </div>
+</article>
+</main>

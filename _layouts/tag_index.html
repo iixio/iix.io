@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<main id="main" role="main">
+<header>
+  <h1>Posts tagged ‘{{ page.title }}’</h1>
+  <p class="subtitle">A listing of posts filed under the {{ page.type }} <em>{{ page.title }}</em>.</p>
+</header>
+<article itemscope itemtype="http://schema.org/Article">
+  <div class="content">
+    <div class="list">
+      {% for post in page.posts %}
+        {% include archive__item.html %}
+      {% endfor %}
+     </div>
+  </div>
+</article>
+</main>
