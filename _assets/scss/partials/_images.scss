@@ -1,0 +1,74 @@
+//
+// Piece: images
+// ===============
+//
+// Sprite and image helpers should go here
+//
+
+figure img,
+picture img {
+  display: block;
+  width: 100%;
+  margin-bottom: $unitsize/2;
+}
+
+.alignleft {
+  @media (min-width: $breakpoint-medium) {
+    float: left;
+    width: calc(50% - #{$unitsize/2});
+    margin-left: -25%;
+    margin-right: $unitsize;
+	z-index: 2;
+  }
+}
+
+.alignright {
+  @media (min-width: $breakpoint-medium) {
+    float: right;
+    width: calc(50% - #{$unitsize/2});
+    margin-right: -25%;
+    margin-left: $unitsize;
+	z-index: 2;
+  }
+}
+
+.imgbleed {
+  @media (min-width: $breakpoint-medium) {
+    width: calc(150% + #{$unitsize/2});
+	margin-left:-26%;
+	z-index: 2;
+  }
+}
+
+.lx2 {
+  @media (min-width: 1440px) {
+    width: calc(75% - #{$unitsize/2});
+  }
+}
+
+.x2 {
+  @media (min-width: 1440px) {
+    width: calc(75% - #{$unitsize/2});
+  }
+}
+
+figcaption :last-child {
+  margin-bottom: 0;
+}
+
+.page-image {
+    position: relative;
+	margin: -1.33333rem -1.33333rem 1.33333rem;
+}
+
+.image-credit {
+  padding: 0 1.33333rem;
+  text-align: right;
+  font-family: $font-sand;
+  font-size: $mid;
+}
+
+.page-image img {
+    width: 100%;
+	font-size: 0px;
+}

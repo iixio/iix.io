@@ -1,0 +1,44 @@
+//
+// Module: footer
+// ==============
+//
+// High-level styles for the footer
+//
+
+body > footer {
+  border-top: 1px solid $lighter-text;
+  padding-top: $unitsize;
+  padding-bottom: $unitsize;
+  width: 90%;
+}
+
+
+body > footer section{
+	position:static
+}
+
+body > footer section+section::before{
+	content:none;
+	content:normal
+}
+
+@media screen and (min-width: 700px){
+	body > footer section+section::before{
+		content:'';
+		position:absolute;
+		width:1px;
+		margin-left: -($unitsize/2);
+		top:0;
+		bottom:0;
+		background-color:rgba(61,70,77,0.1)
+	}
+
+}
+
+.copyright{
+  border-top: 1px solid rgba(61,70,77,0.1);
+  padding-top: $unitsize/2;
+  padding-bottom: $unitsize;
+  width: 90%;
+  text-align: center;
+}

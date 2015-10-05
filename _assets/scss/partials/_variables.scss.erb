@@ -1,0 +1,63 @@
+//
+// Piece: variables
+// ==================
+//
+// Global variables of all kinds
+//
+
+// Page Sizes
+$base-font: 18 * 1;
+$base-line-height: ($base-font + 6)/$base-font;		// normal font is ($base-font + 4)/$base-font;
+$base-font-size: ($base-font/16)*100%;				// font size in percent
+$base-width: (900/$base-font) * 1rem;				// max-width in rem/em
+$base-width-content: 100/3*2*1%;
+
+
+// Margin
+$base-margin-bottom: (($base-font * $base-line-height) / $base-font) * 1rem;
+$base-margin-bottom-h1: (($base-font * $base-line-height) / 36) * 1rem;
+$base-margin-bottom-h2: (($base-font * $base-line-height) / 27) * 1rem;
+$base-margin-bottom-h3: (($base-font * $base-line-height) / 18) * 1rem;
+$base-margin-bottom-head: (($base-font * $base-line-height) / 24) * 1rem;
+$base-margin-bottom-subtitle: (($base-font * $base-line-height) / 20) * 1rem;
+
+
+// Text Sizes
+$subtitle-font-size: (20 / $base-font) * 1rem;
+$heading1: (36 / $base-font) * 1rem;
+$heading2: (27 / $base-font) * 1rem;
+$heading3: (18 / $base-font) * 1rem;
+$head: (24 / $base-font) * 1rem;
+$mid: (16 / $base-font) * 1rem;
+
+// MISC
+$letter-spacing: (2.7 / $base-font) * 1rem;
+
+
+// Group: Unit Sizes
+$unitsize: $base-line-height * 1rem;
+
+
+// Fonts
+$default-font: 'Georgia, serif';
+$font-iix :  'NYT';
+$font-sand:  'roboto';
+$font-code:  'Source Code Pro', Monaco, monospace;
+
+
+// Breakpoints
+$breakpoint-medium: 600px !default;
+$breakpoint-small: 480px !default;
+
+
+// Group: Colors
+$highlight: <%= site.config['color'] %>;
+
+$text-color: #333;
+$light-text: rgba($text-color, .6);
+$lighter-text: rgba($text-color, .1);
+
+$background-color: #fdfdfd;
+$brand-color: #2a7ae2;
+$link-color: #e0470d;
+$link-color-visited: #c53a06;

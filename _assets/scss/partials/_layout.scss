@@ -1,0 +1,107 @@
+//
+// Piece: layout
+// ===============
+//
+// Layout rules
+//
+
+main {padding: $unitsize;}
+
+main > article {
+  max-width: 50rem;
+  margin: 0px auto;
+  list-style: outside none none;
+}
+
+a .meta,time.meta {
+  font-size: .8rem;
+  margin-bottom: 0;
+  font-style: italic;
+}
+
+time.meta {
+  font-family: $font-sand;
+  font-style: normal;
+}
+
+cite:before{
+  content:" — ";
+}
+
+.content {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  min-height: 1px;
+  padding-left: $unitsize;
+  vertical-align: top;
+  width: $base-width-content;
+}
+
+.list > article {
+  margin-bottom: $unitsize;
+}
+
+@media screen and (max-width: 600px){
+	.content {
+		padding-left: 0px;
+		width: auto;
+	}
+}
+
+@media (max-width: 860px) and (min-width: 600px){
+	.content {
+		padding-left: 0px;
+	}
+}
+
+
+footer, .footer {
+  max-width: $base-width;
+  margin: 0 auto;
+
+}
+
+main > footer {
+  padding:$unitsize/2;
+  width: 96%;
+  text-align: center;
+}
+
+.g {
+  list-style: outside none none;
+  margin-left: -($unitsize);
+}
+
+.footers {
+  box-sizing: border-box;
+  display: inline-block;
+  margin-right: -0.25rem;
+  min-height: 1px;
+  padding-left: $unitsize;
+  vertical-align: top;
+  width: 50%;
+  font-size: .8889rem;
+  padding-top: $unitsize/2;
+  padding-bottom: $unitsize/2;
+}
+
+.footers p {
+  margin-bottom: 0px;
+}
+
+@media screen and (max-width: 600px){
+	.g {
+    margin-left: 0px;
+    width: auto;
+}
+
+	.footers {
+		display: block;
+		margin-left: 0px;
+		margin-right: 0px;
+		padding-left: 0px;
+		width: auto;
+	}
+}

@@ -1,0 +1,123 @@
+//
+// Module: header
+// ==============
+//
+// High-level styles for the header
+//
+
+body > header {
+  padding-top: $unitsize/2;
+  padding-bottom: $unitsize/2;
+  /* background-color: #f5f5f5; */
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 0px;
+}
+
+header .logo {
+  float: left;
+  margin-left: 0px;
+  z-index: 1;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.io {
+  fill: #e4e4e4;
+}
+
+.iix {
+  fill: #444;
+}
+
+main header, .nav {
+  text-align: right;
+  max-width:50rem;
+  margin:0 auto;
+  zoom: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+header .nav {
+  width: 96%;
+}
+
+.headnav .nav {
+  width: 100%;
+}
+
+main header {
+  margin-bottom: $unitsize*3;
+  margin-top: $unitsize*3;
+  text-align: center;
+}
+
+nav a {
+  display: inline-block;
+  color: $text-color;
+  text-decoration: none;
+	font-size: 1rem;
+	font-weight: 400;
+  padding: .2rem .4rem;
+  border-bottom: none;
+}
+
+nav a:hover {
+  opacity: 0.8;
+  border-bottom-color: rgba(250, 250, 250, 0.8);
+  color: #000;
+}
+
+// ----------------------------
+
+.headnav {
+  ul {
+    overflow: visible;
+  }
+
+  li {
+    margin-top: -1px;
+
+    + li {
+      margin-left: 0;
+    }
+  }
+
+  a {
+    text-decoration: none;
+
+    color: $light-text;
+
+    &.active, &.active:hover {
+      color: $link-color;
+      text-decoration: none;
+    }
+
+    &:hover {
+      color: $text-color;
+    }
+  }
+}
+
+.breadcrumbs {
+  margin-top: -5.333rem;
+  /* Generates the font-size in REMs with a PX fallback */
+  font-size: 0;
+  margin-bottom: $unitsize*2;
+  text-align: left;
+  text-transform: uppercase;
+  color: #999;
+}
+
+.breadcrumbs .sep {
+  font-size: 1.2rem;
+  vertical-align: bottom;
+  line-height: normal;
+}
+
+.breadcrumbs a {
+  background-image: none;
+  font-size: 11px;
+  font-family: roboto;
+  letter-spacing: 1.5px;
+  color: #999;
+}

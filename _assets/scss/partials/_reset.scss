@@ -1,0 +1,38 @@
+//
+// Piece: reset
+// ==============
+
+
+body {
+  unicode-bidi: -moz-isolate;
+}
+
+::-moz-selection {
+  background-color: rgba(0,0,0,0.1);
+}
+
+::selection {
+  background-color: rgba(0,0,0,0.1);
+}
+
+img {
+  max-width: 100%;
+}
+
+ul, ol {
+  padding-left: 1.4rem;
+  overflow: hidden;
+}
+
+header, main, article, footer, nav,
+p, table, figure, figcaption, blockquote, pre, ul, ol {
+  margin-bottom: $base-margin-bottom;
+}
+
+picture {
+  display: block;
+}
+
+li ol, li ul {
+  margin-bottom: 0;
+}
