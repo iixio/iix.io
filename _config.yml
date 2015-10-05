@@ -1,0 +1,57 @@
+inc:
+  # Blog Information
+  title:        "IIX"
+  subtitle:     "Modern Jekyll based blog for companies"
+  cover_image:  blog-cover.jpg
+  logo:         logo.png
+
+title: Indonesian Informations Exchange
+email: your-email@domain.com
+baseurl: ""
+url: "http://iix.io"
+
+# paginate: 2
+# paginate_path: "page/:num"
+
+gems:
+  - jekyll-sitemap
+  - jekyll-archives
+
+# Plugin: jekyll-archives
+
+jekyll-archives:
+  enabled:
+    - tags
+    - year
+  layouts:
+    year: year_index
+    tag: tag_index
+  permalinks:
+    year: /:year/
+    tag: /tag/:name/
+excludes: ["Makefile", "_config.yml"]
+
+permalink: /:categories/:title
+highlighting: pygments
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+encoding: utf-8
+color: "#CA4A4C"
+assets:
+  sources:
+    - _assets/scss
+    - _assets/js
+
+  css_compressor: sass
+  js_compressor:  uglifier
+  cache:          true
+  cachebust: hard
+production: false
+
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  profile: false
