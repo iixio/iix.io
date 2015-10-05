@@ -1,0 +1,20 @@
+<script>
+  /* trigger font loading */
+
+  if (document.documentElement.className.indexOf( "fonts-loaded" ) < 0 ) {
+    var NYT400 = new FontFaceObserver("NYT", {weight: 400});
+    var NYT400italic = new FontFaceObserver("NYT", {weight: 400, style: 'italic'});
+    var NYT700 = new FontFaceObserver("NYT", {weight: 700});
+
+    var Roboto400 = new FontFaceObserver("roboto", {weight: 400});
+
+    Promise.all([
+      NYT400.check(),
+      NYT400italic.check(),
+      NYT700.check(),
+      Roboto400.check()
+    ]).then(function() {
+      document.documentElement.className += " fonts-loaded";
+    });
+  }
+</script>

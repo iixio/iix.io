@@ -1,0 +1,10 @@
+<div class="headnav" role="navigation">
+  <ul class="nav">
+    {% assign pages = site.pages | sort:"url" %}
+    {% for p in pages %}
+      {% if p.in-nav == true %}
+        <li><a {% if p.url == page.url %}class="active"{% endif %} href="{{ p.url | replace:'index.html','' }}">{{ p.title }}</a></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>

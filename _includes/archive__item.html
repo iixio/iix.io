@@ -1,0 +1,15 @@
+<article>
+  <a href="{{ site.url }}{{ post.url }}">
+      {% if post.categories contains 'mastering-paper' %}
+        <h2 class="h2">{{ post.title }}</h2>
+        {% else %}
+        <h2 class="h2">{{ post.title }}</h2>
+      {% endif %}
+      <p class="meta">{{ post.excerpt }}</p>
+  </a>
+	  {% if post.work %}
+        {{ post.work }}
+      {% else %}
+	  <time class="meta" datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | date: "%A %-d %B %Y" }}</time>
+	  {% endif %}
+</article>
